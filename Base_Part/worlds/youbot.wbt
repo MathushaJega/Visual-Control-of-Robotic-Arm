@@ -39,8 +39,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.3720203282249756 0.4112161950041779 0.8321671204473698 1.6542582799411776
-  position -0.4001745246352023 -3.911256618683527 4.858274734267839
+  orientation -0.3768715273902122 0.5005159902109311 0.7793918112129097 1.5363168670638176
+  position -1.7039137097995607 -4.392365972127051 6.370299602386355
 }
 TexturedBackground {
 }
@@ -51,8 +51,8 @@ Floor {
   tileSize 1 1
 }
 DEF YOUBOT Robot {
-  translation -2.1383379407108456 0.31924600095633754 0.10259231574905633
-  rotation 0.00011085353979094961 -5.139199968865747e-05 0.9999999925351775 -2.318478571442122
+  translation -1.67497 -0.454867 0.102356
+  rotation 6.953596378758772e-05 -0.00038283856476336025 0.9999999242996888 0.3583499955224991
   children [
     Group {
       children [
@@ -160,7 +160,7 @@ DEF YOUBOT Robot {
     }
     DEF WHEEL11 HingeJoint {
       jointParameters HingeJointParameters {
-        position -1242.439548648093
+        position -1512.1817271188997
         axis 0 1 0
         anchor 0.228 -0.158 -0.055
       }
@@ -175,7 +175,7 @@ DEF YOUBOT Robot {
       ]
       endPoint DEF WHEEL1 Solid {
         translation 0.228 -0.158 -0.055
-        rotation 0 1 0 1.6311421734650993
+        rotation 0 -1 0 4.2172533957989895
         children [
           Shape {
             appearance PBRAppearance {
@@ -355,13 +355,11 @@ DEF YOUBOT Robot {
           density -1
           mass 0.4
         }
-        linearVelocity 0.1391618896533764 0.5020582066610877 -0.0011316809419627217
-        angularVelocity -10.99558762922445 9.92186438358416 -1.0299859439880175
       }
     }
     DEF WHEEL22 HingeJoint {
       jointParameters HingeJointParameters {
-        position 2729.6649634648365
+        position 2740.310199189867
         axis 0 1 0
         anchor 0.228 0.158 -0.055
       }
@@ -376,7 +374,7 @@ DEF YOUBOT Robot {
       ]
       endPoint DEF WHEEL2 Solid {
         translation 0.228 0.158 -0.055
-        rotation 0 1 0 2.7625401488960155
+        rotation 0 1 0 0.8414052595673308
         children [
           Shape {
             appearance PBRAppearance {
@@ -556,13 +554,11 @@ DEF YOUBOT Robot {
           density -1
           mass 0.4
         }
-        linearVelocity -0.0801497617180309 0.261193182584853 0.001266564252008315
-        angularVelocity 1.958200520236801 -1.8385271672694952 -0.9848001933135291
       }
     }
     DEF WHEEL3 HingeJoint {
       jointParameters HingeJointParameters {
-        position -1363.0003927875518
+        position -1621.6644362242073
         axis 0 1 0
         anchor -0.228 -0.158 -0.055
       }
@@ -577,7 +573,7 @@ DEF YOUBOT Robot {
       ]
       endPoint DEF WHEEL_SOLID Solid {
         translation -0.228 -0.158 -0.055
-        rotation 0 -1 0 5.832366436761166
+        rotation 0 -1 0 0.6026269718739821
         children [
           Shape {
             appearance PBRAppearance {
@@ -757,13 +753,11 @@ DEF YOUBOT Robot {
           density -1
           mass 0.4
         }
-        linearVelocity 0.4855715056107949 0.18521484847075334 -0.0012731329037770317
-        angularVelocity -10.999186441030677 9.91788939131661 -1.0310187735860858
       }
     }
     DEF WHEEL4 HingeJoint {
       jointParameters HingeJointParameters {
-        position 2814.9574012196313
+        position 2796.912273742689
         axis 0 1 0
         anchor -0.228 0.158 -0.055
       }
@@ -778,7 +772,7 @@ DEF YOUBOT Robot {
       ]
       endPoint DEF WHEEL_SOLID Solid {
         translation -0.228 0.158 -0.055
-        rotation 0 1 0 0.0903836031765236
+        rotation 0 -0.9999999999999999 0 5.388373259406374
         children [
           Shape {
             appearance PBRAppearance {
@@ -958,8 +952,6 @@ DEF YOUBOT Robot {
           density -1
           mass 0.4
         }
-        linearVelocity 0.2662055161613101 -0.05573332661814667 0.0011251030315919406
-        angularVelocity 1.9260077265327542 -1.8095271381655635 -0.9848004672363715
       }
     }
     DEF PLATE Solid {
@@ -1072,27 +1064,27 @@ DEF YOUBOT Robot {
       0 0 0
     ]
   }
-  controller "safe_Movement"
+  controller "graph"
   supervisor TRUE
-  linearVelocity 0.20504740144830833 0.22104701528480322 -4.253967674473499e-06
-  angularVelocity -0.005414681187399527 -0.005540050640650376 -1.0275525185662935
 }
 DEF BALL1 Ball {
-  translation 0.630467 0.384581 0.03995683599999999
+  translation 0.630467 0.384581 0.03995683600000001
   rotation 7.559834293125481e-14 2.007560056152273e-13 1 0.7262543840316745
   name "ball(4)"
   color 1 0 0.498039
   radius 0.04
 }
 DEF BALL2 Ball {
-  translation -1.25187 0.344546 0.039956835999965114
-  rotation 2.4230322403235504e-16 6.164367705221064e-16 -1 1.6299453071795857
+  hidden linearVelocity_0 -0.0015152041430228284 0.00042845528337347177 5.875741812766803e-08
+  hidden angularVelocity_0 -0.010701493338645725 -0.037845132671903856 -1.9616144744364952e-17
+  translation -2.081792398465375 0.6350310506633565 0.03995683589398771
+  rotation 0.0053642648797511345 -0.008933415351872647 -0.9999457079024094 1.6327391896462689
   name "ball(1)"
   color 0 0 0
   radius 0.04
 }
 DEF BALL3 Ball {
-  translation 0.270646 -0.166339 0.039956835999965114
+  translation 0.249961 -0.515734 0.0399568
   rotation 2.4230322403235504e-16 6.164367705221064e-16 -1 1.6299453071795857
   name "ball(2)"
   color 0.333333 0 0
